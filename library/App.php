@@ -70,7 +70,7 @@ class App
 
         new \Municipio\Admin\Gutenberg\Blocks\Button();
 
-        new \Municipio\Admin\ExternalDeptendents(); 
+        new \Municipio\Admin\ExternalDeptendents();
 
         new \Municipio\Admin\Options\Theme();
         new \Municipio\Admin\Options\Timestamp();
@@ -80,7 +80,7 @@ class App
         new \Municipio\Admin\Options\ContentEditor();
         new \Municipio\Admin\Options\AttachmentConsent();
 
-        new \Municipio\Admin\Acf\PrefillIconChoice(); 
+        new \Municipio\Admin\Acf\PrefillIconChoice();
 
         new \Municipio\Admin\Roles\General();
         new \Municipio\Admin\Roles\Editor();
@@ -108,5 +108,15 @@ class App
             $paths[] = get_template_directory() . '/views/v3';
             return $paths;
         });
+
+        if (function_exists('acf_add_options_page')) {
+            acf_add_options_page(array(
+                'page_title' 	=> 'Trend och omvärldsanalys',
+                'menu_title'	=> 'Trend och omvärldsanalys',
+                'menu_slug' 	=> 'trend-och-omvarldsanalys',
+                'capability'	=> 'edit_posts',
+                'redirect'		=> false
+            ));
+        }
     }
 }
