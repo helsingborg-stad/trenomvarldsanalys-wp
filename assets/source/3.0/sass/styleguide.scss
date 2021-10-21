@@ -200,26 +200,50 @@
 // @import "~@helsingborg-stad/styleguide/source/sass/pages/home";
 // @import "~@helsingborg-stad/styleguide/source/sass/pages/component";
 
-#sidebar-slider-area--container {
-    .modularity-mod-posts {
-        .grid-md-3 {
-            padding: 0;
-        }
-        
-        .c-card {
-            position: relative;
-            border-radius: 0!important;
-            box-shadow: none!important;
+body {
+    background: #e2e2e2!important;
+}
 
-            .c-card__body {
-                position: absolute;
-                top: 0;
-                left: 0;
-                bottom: 0;
-                right: 0;
-                background-color: #fff;
-                opacity: 0.4;
-            }
+#site-header {
+    background: #f2f2f2;
+}
+
+.u-width--33 {
+    width: 33.33333333%!important;
+}
+
+.hero-content {
+    display: flex;
+
+    h1 {
+        color: var(--color-primary)
+    }
+}
+
+.hero-posts {
+    display: flex;
+
+    .hero-post{
+        height: 25vw;
+        position: relative;
+        display: flex;
+        align-items: end;
+        color: #fff;
+        text-decoration: none;
+
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        img {
+            position: absolute;
+            z-index: -1;
+        }
+
+        h4 {
+            font-size: 1.8rem;
+            margin: 0 1.7rem .7rem;
         }
     }
 }

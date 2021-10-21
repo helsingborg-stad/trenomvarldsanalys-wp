@@ -20,7 +20,6 @@
 
     {{-- Wordpress required call to wp_header() --}}
     {!! $wpHeader !!}
-
 </head>
 
 <body class="{{ $bodyClass }}" js-page-id="{{$pageID}}">

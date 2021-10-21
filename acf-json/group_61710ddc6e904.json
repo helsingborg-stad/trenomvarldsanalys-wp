@@ -23,9 +23,9 @@
             "sub_fields": [
                 {
                     "key": "field_61710e91510a2",
-                    "label": "Länk",
+                    "label": "Sida",
                     "name": "_to_page_link",
-                    "type": "page_link",
+                    "type": "post_object",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -39,8 +39,9 @@
                     ],
                     "taxonomy": "",
                     "allow_null": 0,
-                    "allow_archives": 1,
-                    "multiple": 0
+                    "multiple": 0,
+                    "return_format": "object",
+                    "ui": 1
                 },
                 {
                     "key": "field_61710efdd8c45",
@@ -81,5 +82,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1634803272
+    "modified": 1634806804
 }
