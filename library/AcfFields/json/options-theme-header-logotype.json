@@ -1,0 +1,48 @@
+[{
+    "key": "group_56c5d34a261f5",
+    "title": "Header logotype",
+    "fields": [
+        {
+            "key": "field_56c5d3530369f",
+            "label": "Logotyp att anv\u00e4nda i sidhuvudet",
+            "name": "header_logotype",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "standard": "Prim\u00e4r",
+                "negative": "Sekund\u00e4r"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "",
+            "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-theme-options"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": ""
+}]
+

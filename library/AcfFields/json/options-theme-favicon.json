@@ -1,0 +1,229 @@
+[{
+    "key": "group_56cc39aba8782",
+    "title": "Favicon",
+    "fields": [
+        {
+            "key": "field_56cc3f64c0b41",
+            "label": "Favoritikoner",
+            "name": "favicons",
+            "type": "repeater",
+            "instructions": "L\u00e4gg till favoritikoner i olika storlekar. Om en storlek har multipla v\u00e4rden kommer bara den senast specificerade att anv\u00e4ndas.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "L\u00e4gg till rad",
+            "collapsed": "",
+            "sub_fields": [
+                {
+                    "key": "field_56cc3f70c0b42",
+                    "label": "Typ",
+                    "name": "favicon_type",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "choices": {
+                        "fav": "favicon.ico (16x16px, 32x32px, 48x48px)",
+                        "152": "iOS, Android (152x152px)",
+                        "144": "IE10, Windows Metro (144x144px)"
+                    },
+                    "default_value": false,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": "",
+                    "return_format": "value",
+                    "disabled": 0,
+                    "readonly": 0
+                },
+                {
+                    "key": "field_56cc3f8685425",
+                    "label": "Ikon 152x152",
+                    "name": "favicon_icon",
+                    "type": "image",
+                    "instructions": "M\u00e5ste vara 152x152 pixlar och format .png",
+                    "required": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_56cc3f70c0b42",
+                                "operator": "==",
+                                "value": "152"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "full",
+                    "library": "all",
+                    "min_width": 152,
+                    "min_height": 152,
+                    "min_size": "",
+                    "max_width": 152,
+                    "max_height": 152,
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_56cc3fc585426",
+                    "label": "Ikon 144x144",
+                    "name": "favicon_icon",
+                    "type": "image",
+                    "instructions": "M\u00e5ste vara 144x144 pixlar och format .png",
+                    "required": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_56cc3f70c0b42",
+                                "operator": "==",
+                                "value": "144"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "full",
+                    "library": "all",
+                    "min_width": 144,
+                    "min_height": 144,
+                    "min_size": "",
+                    "max_width": 144,
+                    "max_height": 144,
+                    "max_size": "",
+                    "mime_types": "png"
+                },
+                {
+                    "key": "field_56cc400885427",
+                    "label": "Favicon.ico",
+                    "name": "favicon_icon",
+                    "type": "file",
+                    "instructions": "M\u00e5ste vara en .ico inneh\u00e5llandes 16x16px, 32x32px and 48x48px",
+                    "required": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_56cc3f70c0b42",
+                                "operator": "==",
+                                "value": "fav"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_size": "",
+                    "max_size": "",
+                    "mime_types": ".ico"
+                },
+                {
+                    "key": "field_56cc404d85428",
+                    "label": "Ikon",
+                    "name": "favicon_icon",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_56cc3f70c0b42",
+                                "operator": "!=",
+                                "value": "fav"
+                            },
+                            {
+                                "field": "field_56cc3f70c0b42",
+                                "operator": "!=",
+                                "value": "152"
+                            },
+                            {
+                                "field": "field_56cc3f70c0b42",
+                                "operator": "!=",
+                                "value": "144"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_56cc5290155fc",
+                    "label": "Bakgrundsf\u00e4rg p\u00e5 Metro-bricka",
+                    "name": "favicon_tile_color",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_56cc3f70c0b42",
+                                "operator": "==",
+                                "value": "144"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#FFFFFF"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-theme-options"
+            }
+        ]
+    ],
+    "menu_order": 8,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": ""
+}]
+

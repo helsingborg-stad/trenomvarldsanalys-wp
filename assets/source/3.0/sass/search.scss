@@ -1,0 +1,96 @@
+/* Popup search modal */ 
+.search-modal {
+    height: 100vh;
+    box-shadow: none;
+    background-color: transparent;
+    display: flex;
+}
+
+.search-modal .c-modal__content {
+    margin: auto 0;
+}
+
+.search-modal .c-form {
+    max-width: calc(#{$base} * 75);
+    width: 90%; 
+    margin: auto;
+}
+
+.search-modal .c-typography__variant--h1 {
+    color: #fff; 
+    margin: 0 0 map-get($spacers, "2") 0;
+}
+
+#sidebar-slider-area--container {
+    position: relative;
+    margin-bottom: calc(#{$base} * 11);
+
+    .modularity-mod-slider,
+    .c-slider {
+        margin-bottom: 0;
+    }
+
+    .c-slider,
+    .c-slider__container {
+        border-radius: 0;
+    }
+
+
+    #hero-search-form {
+        color: rgb(61,61,61); 
+        min-width: 300px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 3000;
+        border: 1px solid #eee;
+        border-radius: $border-radius-sm; 
+        background-color: #fff; 
+
+        @include mq('xs') {
+            width: 80%;
+        }
+
+        @include mq('sm') {
+            width: 70%;
+        }
+
+        @include mq('md') {
+            width: 50%;
+        }
+
+        @include mq('lg') {
+            width: 30%;
+        }
+    }
+
+    #hero-search-form .c-button {
+        box-shadow: none; 
+        border-left: 1px solid #eee;
+        color: inherit;
+        border-radius: 0;
+    }
+
+    #hero-search-form input[type="search"] {
+        border-radius: inherit;
+        background-color: inherit;
+        border: none; 
+        color: inherit;
+    }
+
+    #hero-search-form .c-field__text--label {
+        display: none;
+    }
+
+    #hero-search-form label {
+        color: inherit;
+        font-weight: bold;
+    }
+}
+@media print {
+
+    #sidebar-slider-area--container {
+        display:none;
+    }
+}

@@ -1,0 +1,29 @@
+.nav-helper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: calc(#{$base} * 2);
+    margin-bottom: calc(#{$base} * 2);
+
+    @include mq('md') {
+        margin-bottom: calc(#{$base} * 3);
+    }  
+
+    .nav-accessibility a,
+    .nav-accessibility a:visited,
+    .nav-accessibility a:hover {
+        color:#000;
+        font-weight: 600;
+        text-decoration: none;
+    }
+
+    .nav-accessibility .c-icon {
+        position: relative;
+        top: 5px;
+    }
+}
+@media print {
+    .nav-helper {
+        display:none;
+    }
+}

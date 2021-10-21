@@ -1,0 +1,10 @@
+{
+  "css/mce.css": "css/mce.css",
+  "css/municipio.css": "css/municipio.css",
+  "css/styleguide.css": "css/styleguide.css",
+  "js/mce.js": "js/mce.js",
+  "js/mce-metadata.js": "js/mce-metadata.js",
+  "js/mce-pricons.js": "js/mce-pricons.js",
+  "js/municipio.js": "js/municipio.js",
+  "js/styleguide.js": "js/styleguide.js"
+}

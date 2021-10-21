@@ -1,0 +1,19 @@
+.site-footer {
+    padding-top: calc(#{$base} * 6);
+    padding-bottom: calc(#{$base} * 4);
+    border-top: 1px solid #eee; 
+    background-color: $color-white; 
+    box-shadow: inset 0 0 500px rgba($color-black, .07);
+}
+
+.site-footer .site-footer__logo {
+    max-width: calc(#{$base} * 34);
+}
+
+.site-footer {
+    ul.menu {
+        @include unlist();
+        padding: 0;
+        margin: 0;
+    }
+}

@@ -1,0 +1,33 @@
+// Logo
+.c-header.c-header--business .c-logotype,
+.c-header.c-header--casual .c-logotype {
+    display: block;
+    width: auto;
+    margin: auto;
+}
+
+.c-header.c-header--business .mobile-menu-trigger,
+.c-header.c-header--casual .mobile-menu-trigger {
+  margin-right: calc((#{$base} * 2) / -1);
+  color: $color-black;
+}
+
+#fixed-header {
+    z-index: $level-6;
+}
+
+@include mq(map_get($breakpoints-map, "xs"), map_get($breakpoints-map, "md")) {
+    #fixed-header {
+        .c-nav {
+            flex-direction: column;
+        }
+    }
+}
+
+@include mq(md) {
+    .c-header.is-sticky {
+        position: fixed;
+        top: 0px;
+        width: 100%;
+    }
+}
