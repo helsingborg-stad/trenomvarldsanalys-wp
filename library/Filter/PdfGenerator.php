@@ -50,7 +50,7 @@ class PdfGenerator
         $dompdf->render();
 
         // Output the generated PDF to Browser
-        $dompdf->stream();
+        echo base64_encode($dompdf->output());
     }
 
     public static function init($data)
