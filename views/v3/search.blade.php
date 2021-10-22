@@ -13,52 +13,9 @@
     
         <section class="o-container t-searchform u-margin__top--6">
 
-            <div class="o-grid">
-                
-                <div class="o-grid-12">
-                    @form([
-                        'method' => 'get',
-                        'action' => $homeUrl,
-                        'classList' => []
-                    ])
+            @include('partials.topics-box')
 
-                        @group(['direction' => 'horizontal'])
-                            @field([
-                                'id' => 'search-form--field',
-                                'type' => 'text',
-                                'attributeList' => [
-                                    'type' => 'search',
-                                    'name' => 's',
-                                    'required' => true,
-                                ],
-                                'placeholder' => $lang->searchOn . " " . $siteName,
-                                'classList' => ['u-flex-grow--1'],
-                                'size' => 'lg',
-                                'radius' => 'xs',
-                                'icon' => ['icon' => 'search']
-                            ])
-                            @endfield
-                            @button([
-                                'id' => 'search-form--submit',
-                                'text' => $lang->search,
-                                'color' => 'primary',
-                                'type' => 'filled',
-                                'size' => 'lg',
-                                'attributeList' => [
-                                    'id' => 'search-form--submit'
-                                ]
-                            ])
-                            @endbutton
-                        @endgroup
-                    @endform
-
-                    <div class="search-result-count u-margin__top--1">
-                        @typography(['variant' => 'meta', 'element' => 'span'])
-                            {{ $lang->found }} {{ $resultCount }} {{ $lang->results }} 
-                        @endtypography
-                    </div>
-                </div>
-            </div>
+            @include('partials.categories-box')
 
         </section>
 

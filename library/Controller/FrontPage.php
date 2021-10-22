@@ -29,39 +29,9 @@ class FrontPage extends \Municipio\Controller\Singular
 
         $this->data['heroPostClass'] = 'hero-post ' . $class;
 
-        $this->data['currentTopics'] = $this->getTopics();
-        $this->data['currentCategories'] = $this->getCategories();
+        $this->data['currentTopics'] = Topics::get();
+        $this->data['currentCategories'] = Categories::get();
         $this->data['news'] = $this->getNews();
-    }
-
-    public function getTopics()
-    {
-        $label = get_field('_to_topics_label', 'option');
-        $description = apply_filters('the_content', get_field('_to_topics_description', 'option'));
-        $topics = get_field('_to_current_topics', 'option');
-
-        return (object)[
-            'label' => $label,
-            'description' => $description,
-            'topics' => array_map(function ($topicId) {
-                return get_tag($topicId);
-            }, $topics)
-        ];
-    }
-
-    public function getCategories()
-    {
-        $label = get_field('_to_categories_label', 'option');
-        $description = apply_filters('the_content', get_field('_to_categories_description', 'option'));
-        $categories = get_field('_to_current_categories', 'option');
-
-        return (object)[
-            'label' => $label,
-            'description' => $description,
-            'categories' => array_map(function ($categoryId) {
-                return get_category($categoryId);
-            }, $categories)
-        ];
     }
 
     public function getNews()

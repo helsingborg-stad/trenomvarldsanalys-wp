@@ -3,6 +3,7 @@
 namespace Municipio;
 
 use ComponentLibrary\Init as ComponentLibraryInit;
+
 class Template
 {
     private $bladeEngine = null;
@@ -15,7 +16,7 @@ class Template
         $init = new ComponentLibraryInit($this->viewPaths);
         $this->bladeEngine = $init->getEngine();
 
-        //Init custom tempaltes & views 
+        //Init custom tempaltes & views
         add_action('init', array($this, 'registerViewPaths'), 10);
         add_action('init', array($this, 'initCustomTemplates'), 10);
 
@@ -29,29 +30,29 @@ class Template
     /**
      * Re-check if there is an custom template applied to the page.
      * This switches incorrect view data to a real template if exists.
-     * 
-     * TODO: Investigate why we are getting faulty templates from 
-     * WordPress core functionality. 
+     *
+     * TODO: Investigate why we are getting faulty templates from
+     * WordPress core functionality.
      *
      * @param string $view
      * @return string
      */
-    public function switchTemplate($view) {
-
-        $customTemplate = get_post_meta(get_queried_object_id(), '_wp_page_template', true ); 
+    public function switchTemplate($view)
+    {
+        $customTemplate = get_post_meta(get_queried_object_id(), '_wp_page_template', true);
         
-        if($customTemplate) {
+        if ($customTemplate) {
             //Check if file exsists, before use
-            if(is_array($this->viewPaths) && !empty($this->viewPaths)) {
-                foreach($this->viewPaths as $path) {
-                    if(file_exists(rtrim($path, "/") . '/' . $customTemplate)) {
-                        return $customTemplate; 
+            if (is_array($this->viewPaths) && !empty($this->viewPaths)) {
+                foreach ($this->viewPaths as $path) {
+                    if (file_exists(rtrim($path, "/") . '/' . $customTemplate)) {
+                        return $customTemplate;
                     }
                 }
             }
         }
 
-        return $view; 
+        return $view;
     }
 
     /**
@@ -76,7 +77,6 @@ class Template
      */
     public function initCustomTemplates(): void
     {
-
         $directory = MUNICIPIO_PATH . 'library/Controller/';
 
         foreach (@glob($directory . "*.php") as $file) {
@@ -147,8 +147,6 @@ class Template
             $template = 'E404';
         }
 
-        
-
         //Locate default controller
         $controller = \Municipio\Helper\Controller::locateController($template);
         
@@ -180,7 +178,6 @@ class Template
     public function renderView($view, $data = array())
     {
         try {
-
             $markup = $this->bladeEngine->make(
                 $view,
                 array_merge(
@@ -192,9 +189,8 @@ class Template
             // Adds the option to make html more readable.
             // This is a option that is intended for permanent
             // use. But cannot be implemented due to some html
-            // issues. 
-            if(class_exists('tidy') && isset($_GET['tidy'])) {
-                
+            // issues.
+            if (class_exists('tidy') && isset($_GET['tidy'])) {
                 $tidy = new \tidy;
 
                 $tidy->parseString($markup, [
@@ -206,11 +202,9 @@ class Template
                 $tidy->cleanRepair();
 
                 echo $tidy;
-
             } else {
-                echo $markup; 
+                echo $markup;
             }
-
         } catch (\Throwable $e) {
             echo '<pre style="border: 3px solid #f00; padding: 10px;">';
             echo '<strong>' . $e->getMessage() . '</strong>';
@@ -274,6 +268,7 @@ class Template
             'front-page' => 'front-page.blade.php',
             'paged' => 'paged.blade.php',
             'search' => 'search.blade.php',
+            'filter' => 'filter.blade.php',
             'singular' => 'singular.blade.php',
             'attachment' => 'attachment.blade.php',
         );

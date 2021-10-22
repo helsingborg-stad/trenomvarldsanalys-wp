@@ -1,0 +1,1 @@
+<img src="{{ get_stylesheet_directory_uri() . '/assets/images/grid.svg' }}" id="grid-loader" />

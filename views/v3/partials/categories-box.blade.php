@@ -4,7 +4,7 @@
 
     <div class="u-margin__top--2">
         @foreach ($currentCategories->categories as $category)
-            <a href="search?topic_id={{ $category->slug }}" class="badge">
+            <a href="/filter?topic={{ $category->term_id }}" class="badge filter" data-type="category" data-rel="{{ $category->term_id }}">
                 {{ $category->name }}
             </a>
         @endforeach

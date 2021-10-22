@@ -109,6 +109,21 @@ class App
             return $paths;
         });
 
+        /**
+         * Custom for Trend och omvärldsanalys
+         */
+
+        new \Municipio\Filter\Ajax();
+
+        add_filter('query_vars', function ($vars) {
+            //Add custom URL parameters for filtering/searching
+            $vars[] = "category";
+            $vars[] = "topic";
+
+            return $vars;
+        });
+
+
         if (function_exists('acf_add_options_page')) {
             acf_add_options_page(array(
                 'page_title' 	=> 'Trend och omvärldsanalys',

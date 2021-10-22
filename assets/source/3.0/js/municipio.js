@@ -4,10 +4,8 @@ import Comments from './comments';
 import ArchiveFilter from './archiveFilter';
 import './drawer';
 import './nav';
-import FixedMenu from './fixedMenu';
+import TrendFilter from './trendFilter';
 
-
-var fixedMenu = new FixedMenu();
 
 //Ponyfill for supporting css variables in IE
 cssVars({
@@ -26,6 +24,7 @@ cssVars({
 
 const fab = new Fab();
 const archiveFilter = new ArchiveFilter();
+const trendFilter = new TrendFilter()
 
 fab.showOnScroll();
 

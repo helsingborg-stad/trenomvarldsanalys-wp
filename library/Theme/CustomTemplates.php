@@ -13,6 +13,12 @@ class CustomTemplates
         );
 
         \Municipio\Helper\Template::add(
+            __('Filter', 'municipio'),
+            \Municipio\Helper\Template::locateTemplate('filter.blade.php'),
+            'all'
+        );
+
+        \Municipio\Helper\Template::add(
             __('Full width', 'municipio'),
             \Municipio\Helper\Template::locateTemplate('full-width.blade.php'),
             'all'
