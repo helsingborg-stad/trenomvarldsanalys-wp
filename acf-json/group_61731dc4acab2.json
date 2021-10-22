@@ -1,0 +1,72 @@
+{
+    "key": "group_61731dc4acab2",
+    "title": "Inställningar för PDF",
+    "fields": [
+        {
+            "key": "field_61731dda86ae0",
+            "label": "Försättsblad",
+            "name": "_to_pdf_frontpage",
+            "type": "image",
+            "instructions": "Bild i hög kvalitet som används som försättsblad i den genererade PDF:en",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_61731e1e86ae1",
+            "label": "Slutsida",
+            "name": "_to_pdf_backpage",
+            "type": "image",
+            "instructions": "Bild i hög kvalitet som används som slutsida i den genererade PDF:en",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "trend-och-omvarldsanalys"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1634940401
+}

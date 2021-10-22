@@ -48,7 +48,9 @@
         "helsingborg-stad/blade-engine-wrapper": "dev-master",
         "tgmpa/tgm-plugin-activation": "dev-develop",
         "pragmarx/ia-arr": "^7.3",
-        "helsingborg-stad/recaptcha-integration": ">=1.0.8"
+        "dompdf/dompdf": "dev-master",
+        "setasign/fpdf": "dev-master",
+        "setasign/fpdi": "dev-master"
     },
     "extra" : {
         "installer-paths" : {

@@ -19,6 +19,10 @@ class ComposerStaticInit8f5caafe59a98f1f319ee2ea9f8d1ec2
     );
 
     public static $prefixLengthsPsr4 = array (
+        's' => 
+        array (
+            'setasign\\Fpdi\\' => 14,
+        ),
         'S' => 
         array (
             'Symfony\\Polyfill\\Php80\\' => 23,
@@ -28,6 +32,7 @@ class ComposerStaticInit8f5caafe59a98f1f319ee2ea9f8d1ec2
             'Symfony\\Component\\Translation\\' => 30,
             'Symfony\\Component\\Finder\\' => 25,
             'Symfony\\Component\\Debug\\' => 24,
+            'Svg\\' => 4,
             'ShortPixel\\' => 11,
         ),
         'P' => 
@@ -51,8 +56,13 @@ class ComposerStaticInit8f5caafe59a98f1f319ee2ea9f8d1ec2
         array (
             'HelsingborgStad\\' => 16,
         ),
+        'F' => 
+        array (
+            'FontLib\\' => 8,
+        ),
         'D' => 
         array (
+            'Dompdf\\' => 7,
             'Doctrine\\Inflector\\' => 19,
             'Doctrine\\Common\\Inflector\\' => 26,
         ),
@@ -72,6 +82,10 @@ class ComposerStaticInit8f5caafe59a98f1f319ee2ea9f8d1ec2
     );
 
     public static $prefixDirsPsr4 = array (
+        'setasign\\Fpdi\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/setasign/fpdi/src',
+        ),
         'Symfony\\Polyfill\\Php80\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-php80',
@@ -99,6 +113,10 @@ class ComposerStaticInit8f5caafe59a98f1f319ee2ea9f8d1ec2
         'Symfony\\Component\\Debug\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/debug',
+        ),
+        'Svg\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phenx/php-svg-lib/src/Svg',
         ),
         'ShortPixel\\' => 
         array (
@@ -154,6 +172,14 @@ class ComposerStaticInit8f5caafe59a98f1f319ee2ea9f8d1ec2
             1 => __DIR__ . '/..' . '/helsingborg-stad/global-blade-engine/src',
             2 => __DIR__ . '/..' . '/helsingborg-stad/recaptcha-integration/src',
         ),
+        'FontLib\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phenx/php-font-lib/src/FontLib',
+        ),
+        'Dompdf\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/dompdf/dompdf/src',
+        ),
         'Doctrine\\Inflector\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/inflector/lib/Doctrine/Inflector',
@@ -180,9 +206,25 @@ class ComposerStaticInit8f5caafe59a98f1f319ee2ea9f8d1ec2
         ),
     );
 
+    public static $prefixesPsr0 = array (
+        'S' => 
+        array (
+            'Sabberworm\\CSS' => 
+            array (
+                0 => __DIR__ . '/..' . '/sabberworm/php-css-parser/lib',
+            ),
+        ),
+    );
+
     public static $classMap = array (
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
-        'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'Dompdf\\Cpdf' => __DIR__ . '/..' . '/dompdf/dompdf/lib/Cpdf.php',
+        'FPDF' => __DIR__ . '/..' . '/setasign/fpdf/fpdf.php',
+        'HTML5_Data' => __DIR__ . '/..' . '/dompdf/dompdf/lib/html5lib/Data.php',
+        'HTML5_InputStream' => __DIR__ . '/..' . '/dompdf/dompdf/lib/html5lib/InputStream.php',
+        'HTML5_Parser' => __DIR__ . '/..' . '/dompdf/dompdf/lib/html5lib/Parser.php',
+        'HTML5_Tokenizer' => __DIR__ . '/..' . '/dompdf/dompdf/lib/html5lib/Tokenizer.php',
+        'HTML5_TreeBuilder' => __DIR__ . '/..' . '/dompdf/dompdf/lib/html5lib/TreeBuilder.php',
         'Stringable' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Stringable.php',
         'UnhandledMatchError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/UnhandledMatchError.php',
         'ValueError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/ValueError.php',
@@ -193,6 +235,7 @@ class ComposerStaticInit8f5caafe59a98f1f319ee2ea9f8d1ec2
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit8f5caafe59a98f1f319ee2ea9f8d1ec2::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit8f5caafe59a98f1f319ee2ea9f8d1ec2::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit8f5caafe59a98f1f319ee2ea9f8d1ec2::$prefixesPsr0;
             $loader->classMap = ComposerStaticInit8f5caafe59a98f1f319ee2ea9f8d1ec2::$classMap;
 
         }, null, ClassLoader::class);

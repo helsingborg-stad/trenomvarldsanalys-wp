@@ -20,13 +20,10 @@ class Ajax extends \Municipio\Helper\Ajax
 
         //Hook method to ajax
         $this->hook('ajaxGetFilterView', true);
+        $this->hook('ajaxMakePdf', true);
     }
 
-    /**
-     * Ajax method to add comment likes
-     * @return boolean
-     */
-    public function ajaxGetFilterView()
+    public function preFlight()
     {
         if (! defined('DOING_AJAX') && ! DOING_AJAX) {
             return false;
@@ -37,6 +34,32 @@ class Ajax extends \Municipio\Helper\Ajax
         }
 
         ignore_user_abort(true);
+    }
+
+    /**
+     * Ajax function to make PDF from filtered result
+     *
+     * @return void
+     */
+    public function ajaxMakePdf()
+    {
+        $this->preFlight();
+        
+        $filter = Filter::doAjaxSearch(get_query_var('topic'), get_query_var('category'));
+        $data = $filter->getData();
+
+        $pdf = PdfGenerator::init($data);
+
+        die();
+    }
+
+    /**
+     * Ajax method to get filtered result rendered as view
+     * @return boolean
+     */
+    public function ajaxGetFilterView()
+    {
+        $this->preFlight();
 
         $filter = Filter::doAjaxSearch(get_query_var('topic'), get_query_var('category'));
        

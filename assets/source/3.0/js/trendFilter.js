@@ -39,6 +39,13 @@ export default class TrendFilter{
     }
 
     bindEvents(){
+        const pdfButton = document.getElementById("make-pdf-btn")
+
+        pdfButton.addEventListener('click', (event) => {
+            event.preventDefault()
+            this.fetchPdf(this.params)
+        })
+
         this.elements.forEach(el => {
             el.addEventListener('click', (event) => {
                 event.preventDefault()
@@ -102,6 +109,33 @@ export default class TrendFilter{
             })
 
         this.params = Object.assign(this.params, params)
+    }
+    
+    async fetchPdf(params){
+        if(!ajaxFilterData){
+            console.error("Missing nonce for filtering")
+        }
+
+        $.ajax({
+            url: ajaxFilterData.ajax_url,
+            type: 'post',
+            data: {
+                action: 'ajaxMakePdf',
+                nonce: ajaxFilterData.nonce,
+                topic: params.topic,
+                category: params.category
+            },
+            beforeSend: function() {
+                //Hide current result and show loader
+                $('#filter-posts').addClass('loading')
+            },
+            success: function(response) {
+                const el = document.getElementById("filter-posts")
+                el.innerHTML = response
+
+                $('#filter-posts').removeClass('loading')
+            },
+        });
     }
 
     async fetchResult(params){

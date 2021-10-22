@@ -1,12 +1,12 @@
 @if (!$resultCount)
         <section class="o-container t-searchform u-margin__top--6">
             <div class="o-grid">
-                <div class="o-grid-12">
+                <div class="o-grid-8 u-margin-x--auto">
                     @notice([
                     'type' => 'info',
                     'message' => [
                     'text' => $lang->noResult,
-                    'size' => 'md'
+                    'size' => 'md',
                     ]
                     ])
                     @endnotice
@@ -55,5 +55,7 @@
 
                 </div>
             </div>
+
+            <button id="make-pdf-btn">Skapa PDF</button>
         </section>
     @endif
