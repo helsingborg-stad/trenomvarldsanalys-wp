@@ -127,7 +127,7 @@ export default class TrendFilter{
             },
             beforeSend: function() {
                 //Hide current result and show loader
-                $('#filter-posts').addClass('loading')
+                jQuery('#filter-posts').addClass('loading')
             },
             success: function(response) {
                 const linkSource = `data:application/pdf;base64,${response}`;
@@ -160,7 +160,7 @@ export default class TrendFilter{
                 // }, 100);
                 
 
-                $('#filter-posts').removeClass('loading')
+                jQuery('#filter-posts').removeClass('loading')
             },
         });
     }
@@ -181,13 +181,13 @@ export default class TrendFilter{
             },
             beforeSend: function() {
                 //Hide current result and show loader
-                $('#filter-posts').addClass('loading')
+                jQuery('#filter-posts').addClass('loading')
             },
             success: function(response) {
                 const el = document.getElementById("filter-posts")
                 el.innerHTML = response
 
-                $('#filter-posts').removeClass('loading')
+                jQuery('#filter-posts').removeClass('loading')
             },
         });
     }
