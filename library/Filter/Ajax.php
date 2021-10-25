@@ -19,8 +19,8 @@ class Ajax extends \Municipio\Helper\Ajax
         $this->localize('ajaxFilterData', 'municipio-js');
 
         //Hook method to ajax
-        $this->hook('ajaxGetFilterView', true);
-        $this->hook('ajaxMakePdf', true);
+        $this->hook('ajaxGetFilterView', false);
+        $this->hook('ajaxMakePdf', false);
     }
 
     public function preFlight()

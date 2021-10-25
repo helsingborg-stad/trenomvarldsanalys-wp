@@ -56,6 +56,6 @@
                 </div>
             </div>
 
-            <button id="make-pdf-btn">Skapa PDF</button>
+            <button id="make-pdf-btn" class="c-button c-button__outlined c-button__outlined--primary c-button--md ripple ripple--before">Skapa PDF</button>
         </section>
     @endif

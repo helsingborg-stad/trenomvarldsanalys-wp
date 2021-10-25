@@ -1,3 +1,4 @@
+import axios from 'axios'
 const SHOULD_XHR_PATH = '/filter'
 
 export default class TrendFilter{
@@ -27,6 +28,7 @@ export default class TrendFilter{
 
         if(this.pathName == SHOULD_XHR_PATH){
             this.bindEvents()
+            this.bindPdfBtn()
         }
     }
 
@@ -38,14 +40,16 @@ export default class TrendFilter{
         history.replaceState({}, '', `${self.pathName}?${params}`)
     }
 
-    bindEvents(){
+    bindPdfBtn(){
         const pdfButton = document.getElementById("make-pdf-btn")
 
         pdfButton.addEventListener('click', (event) => {
             event.preventDefault()
             this.fetchPdf(this.params)
         })
+    }
 
+    bindEvents(){
         this.elements.forEach(el => {
             el.addEventListener('click', (event) => {
                 event.preventDefault()
@@ -60,10 +64,9 @@ export default class TrendFilter{
                     this.params[type].push(id)
                 }
 
-                console.log(this.params, type, id)
                 this.dimNonFilterBadges()
                 this.syncState(this)
-                this.fetchResult(this.params)
+                this.fetchResult(this.params, this)
             })
         })
     }
@@ -84,7 +87,6 @@ export default class TrendFilter{
 
     setPath(){
         this.pathName = location.pathname;       
-        console.log(this.pathName)
     }
 
     setParams(){
@@ -116,56 +118,50 @@ export default class TrendFilter{
             console.error("Missing nonce for filtering")
         }
 
-        $.ajax({
-            url: ajaxFilterData.ajax_url,
-            type: 'post',
-            data: {
-                action: 'ajaxMakePdf',
-                nonce: ajaxFilterData.nonce,
-                topic: params.topic,
-                category: params.category
-            },
-            beforeSend: function() {
-                //Hide current result and show loader
-                jQuery('#filter-posts').addClass('loading')
-            },
-            success: function(response) {
-                const linkSource = `data:application/pdf;base64,${response}`;
-                const downloadLink = document.createElement("a");
-                const fileName = "abc.pdf";
-                downloadLink.href = linkSource;
-                downloadLink.download = fileName;
-                downloadLink.click();                
+        const filterPostsEl = document.getElementById('filter-posts')
 
-                jQuery('#filter-posts').removeClass('loading')
-            },
-        });
+        filterPostsEl.classList.add('loading')
+
+        const formData = new FormData()
+        formData.append('action', 'ajaxMakePdf')
+        formData.append('nonce', ajaxFilterData.nonce)
+        formData.append('topic', params.topic)
+        formData.append('category', params.category)
+
+        const { data } = await axios.post(ajaxFilterData.ajax_url, formData)
+        
+        const linkSource = `data:application/pdf;base64,${data}`;
+        const downloadLink = document.createElement("a");
+        const fileName = "trend-omvarlds-analys_rapport-{}.pdf";
+
+        downloadLink.href = linkSource;
+        downloadLink.download = fileName;
+        downloadLink.target = "_blank";
+        downloadLink.click();                
+
+        filterPostsEl.classList.remove('loading')
     }
 
-    async fetchResult(params){
+    async fetchResult(params, self){
         if(!ajaxFilterData){
             console.error("Missing nonce for filtering")
         }
+        
+        const filterPostsEl = document.getElementById('filter-posts')
+        filterPostsEl.classList.add('loading')
 
-        jQuery.ajax({
-            url: ajaxFilterData.ajax_url,
-            type: 'post',
-            data: {
-                action: 'ajaxGetFilterView',
-                nonce: ajaxFilterData.nonce,
-                topic: params.topic,
-                category: params.category
-            },
-            beforeSend: function() {
-                //Hide current result and show loader
-                jQuery('#filter-posts').addClass('loading')
-            },
-            success: function(response) {
-                const el = document.getElementById("filter-posts")
-                el.innerHTML = response
+        const formData = new FormData()
+        formData.append('action', 'ajaxGetFilterView')
+        formData.append('nonce', ajaxFilterData.nonce)
+        formData.append('topic', params.topic)
+        formData.append('category', params.category)
 
-                jQuery('#filter-posts').removeClass('loading')
-            },
-        });
+        const { data } = await axios.post(ajaxFilterData.ajax_url, formData)
+
+        const el = document.getElementById("filter-posts")
+        el.innerHTML = data
+
+        self.bindPdfBtn()
+        filterPostsEl.classList.remove('loading')
     }
 }
