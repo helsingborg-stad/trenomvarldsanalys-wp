@@ -101,7 +101,8 @@
   "dependencies": {
     "@babel/plugin-transform-runtime": "^7.14.5",
     "axios": "^0.23.0",
-    "css-vars-ponyfill": "^2.4.5"
+    "css-vars-ponyfill": "^2.4.5",
+    "tippy.js": "^6.3.7"
   },
   "browser": {
     "child_process": false

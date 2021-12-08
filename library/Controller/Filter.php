@@ -33,6 +33,7 @@ class Filter extends \Municipio\Controller\Archive
 
         $this->data['currentTopics'] = Topics::get();
         $this->data['currentCategories'] = Categories::get();
+        $this->data['currentSearch'] = FilterSearch::get();
     }
     /**
      * Default wordpress search
@@ -67,6 +68,16 @@ class Filter extends \Municipio\Controller\Archive
         //Has topic search?
         if (get_query_var('topic')) {
             $args['tag__in'] = $this->filterVar(get_query_var('topic'));
+        }
+
+        //Has specific post ids search?
+        if (get_query_var('posts')) {
+            $args['post__in'] = $this->filterVar(get_query_var('posts'));
+        }
+
+        //Has content matching term
+        if (get_query_var('term')) {
+            $args['s'] = get_query_var('term');
         }
 
         $this->wpQuery = new \WP_Query($args);
@@ -107,9 +118,13 @@ class Filter extends \Municipio\Controller\Archive
 
         $topic = $filter->filterVar($_POST['topic']);
         $category = $filter->filterVar($_POST['category']);
-
+        $posts = $filter->filterVar($_POST['posts']);
+        $term = $_POST['term'];
+        
         set_query_var("topic", $topic);
         set_query_var("category", $category);
+        set_query_var("posts", $posts);
+        set_query_var("term", $term);
 
         $filter->init();
 

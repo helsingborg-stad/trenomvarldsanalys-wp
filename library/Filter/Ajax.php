@@ -50,7 +50,9 @@ class Ajax extends \Municipio\Helper\Ajax
 
         $pdf = PdfGenerator::init($data);
 
-        die();
+        echo $pdf->renderPdf();
+
+        wp_die();
     }
 
     /**
@@ -60,8 +62,8 @@ class Ajax extends \Municipio\Helper\Ajax
     public function ajaxGetFilterView()
     {
         $this->preFlight();
-
-        $filter = Filter::doAjaxSearch(get_query_var('topic'), get_query_var('category'));
+        
+        $filter = Filter::doAjaxSearch(get_query_var('topic'), get_query_var('category'), get_query_var('term'));
        
         echo render_blade_view('partials.filter-result', $filter->getData());
 

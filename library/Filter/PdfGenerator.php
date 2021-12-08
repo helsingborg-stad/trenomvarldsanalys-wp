@@ -10,15 +10,12 @@ use Municipio\Helper\Template;
 class PdfGenerator
 {
     public $data;
+    public $html;
     public $pages = [];
 
     public function __construct($data)
     {
         $this->data = $data;
-        
-        $html = $this->renderView();
-
-        $this->renderPdf($html);
     }
 
     public function renderView()
@@ -28,13 +25,13 @@ class PdfGenerator
         $backpage = get_field('_to_pdf_backpage', 'option');
         $logo = get_field('logotype', 'option');
 
-        // dd($logo);
-
         return render_blade_view('pdf.layout', compact('posts', 'frontpage', 'backpage', 'logo'));
     }
 
-    public function renderPdf($html)
+    public function renderPdf()
     {
+        $html = $this->renderView();
+
         $options = new Options([
             'isRemoteEnabled' => true,
             'dpi' => 300
@@ -42,15 +39,11 @@ class PdfGenerator
         // instantiate and use the dompdf class
         $dompdf = new Dompdf($options);
         $dompdf->loadHtml($html);
-
-        // (Optional) Setup the paper size and orientation
         $dompdf->setPaper('A4', 'portrait');
-        // $dompdf->set_option('isRemoteEnabled', true);
-        // Render the HTML as PDF
         $dompdf->render();
 
-        // Output the generated PDF to Browser
-        echo base64_encode($dompdf->output());
+        // Return encoded output
+        return base64_encode($dompdf->output());
     }
 
     public static function init($data)

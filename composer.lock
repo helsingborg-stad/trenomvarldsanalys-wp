@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "59f59d872c03515eb51ee97ffc94029b",
+    "content-hash": "5e8bbd16f42b6732d2cee4dd695b1980",
     "packages": [
         {
             "name": "benjamincrozat/blade",
@@ -514,6 +514,40 @@
                 "source": "https://github.com/helsingborg-stad/global-blade-engine/tree/1.2.5"
             },
             "time": "2020-05-18T10:49:41+00:00"
+        },
+        {
+            "name": "helsingborg-stad/modularity-sections",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/helsingborg-stad/modularity-sections.git",
+                "reference": "aa83805faa9ae79a4051a1f2f725338e4d9f100e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/helsingborg-stad/modularity-sections/zipball/aa83805faa9ae79a4051a1f2f725338e4d9f100e",
+                "reference": "aa83805faa9ae79a4051a1f2f725338e4d9f100e",
+                "shasum": ""
+            },
+            "require": {
+                "helsingborg-stad/acf-export-manager": ">=1.0.0"
+            },
+            "type": "wordpress-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian Thulin",
+                    "email": "sebastian.thulin@helsingborg.se"
+                },
+                {
+                    "name": "Nikolas Ramstedt",
+                    "email": "nikolas.ramstedt@helsingborg.se"
+                }
+            ],
+            "time": "2020-05-12T08:34:54+00:00"
         },
         {
             "name": "helsingborg-stad/recaptcha-integration",
@@ -2088,7 +2122,8 @@
         "tgmpa/tgm-plugin-activation": 20,
         "dompdf/dompdf": 20,
         "setasign/fpdf": 20,
-        "setasign/fpdi": 20
+        "setasign/fpdi": 20,
+        "helsingborg-stad/modularity-sections": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

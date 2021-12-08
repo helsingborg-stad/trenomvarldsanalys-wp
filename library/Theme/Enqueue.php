@@ -18,7 +18,7 @@ class Enqueue
 
         // Admin style
         add_action('admin_enqueue_scripts', array($this, 'adminStyle'), 999);
-        add_action( 'enqueue_block_editor_assets', array($this, 'gutenbergStyle'), 999);
+        add_action('enqueue_block_editor_assets', array($this, 'gutenbergStyle'), 999);
         
         //Google scripts
         add_action('wp_enqueue_scripts', array($this, 'googleTagManager'), 999);
@@ -62,13 +62,13 @@ class Enqueue
      * @return void
      */
     public function adminStyle()
-    {        
+    {
         // Load material icons
         wp_register_style('material-icons', 'https://fonts.googleapis.com/icon?family=Material+Icons');
         wp_enqueue_style('material-icons');
     }
 
-    public function gutenbergStyle() 
+    public function gutenbergStyle()
     {
         // Load styleguide css
         wp_register_style('styleguide-css', get_template_directory_uri() . '/assets/dist/'
@@ -105,7 +105,7 @@ class Enqueue
     {
 
         //wp_register_script('municipio', false);
-        // Language & parameters 
+        // Language & parameters
         wp_localize_script('municipio', 'MunicipioLang', array(
             'printbreak' => array(
                 'tooltip' => __('Insert Print Page Break tag', 'municipio')
@@ -152,7 +152,7 @@ class Enqueue
             ucFirst(__('We', 'municipio')),
             ucFirst(__('Th', 'municipio')),
             ucFirst(__('Fr', 'municipio')),
-            ucFirst(__('Sa', 'municipio')),           
+            ucFirst(__('Sa', 'municipio')),
         ));
 
         wp_enqueue_script('pre-styleguide-js');

@@ -26,6 +26,8 @@ const fab = new Fab();
 const archiveFilter = new ArchiveFilter();
 const trendFilter = new TrendFilter()
 
+window.trendFilter = trendFilter
+
 fab.showOnScroll();
 
 new Comments();

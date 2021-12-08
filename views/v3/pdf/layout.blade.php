@@ -3,9 +3,13 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Test</title>
+    <title>Trend- och omvärldsanalys</title>
     <meta name="author" content="Helsingborgs stad">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    
     <style>
         @page {
             margin: 2cm 4cm;
@@ -13,7 +17,7 @@
 
         body {
             font-size: .75rem;
-            font-family: akzidenz
+            font-family: "Open Sans", sans-serif;
         }
 
         div.frontpage,

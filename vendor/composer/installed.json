@@ -523,6 +523,42 @@
         }
     },
     {
+        "name": "helsingborg-stad/modularity-sections",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/helsingborg-stad/modularity-sections.git",
+            "reference": "aa83805faa9ae79a4051a1f2f725338e4d9f100e"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/helsingborg-stad/modularity-sections/zipball/aa83805faa9ae79a4051a1f2f725338e4d9f100e",
+            "reference": "aa83805faa9ae79a4051a1f2f725338e4d9f100e",
+            "shasum": ""
+        },
+        "require": {
+            "helsingborg-stad/acf-export-manager": ">=1.0.0"
+        },
+        "time": "2020-05-12T08:34:54+00:00",
+        "type": "wordpress-plugin",
+        "installation-source": "source",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Sebastian Thulin",
+                "email": "sebastian.thulin@helsingborg.se"
+            },
+            {
+                "name": "Nikolas Ramstedt",
+                "email": "nikolas.ramstedt@helsingborg.se"
+            }
+        ]
+    },
+    {
         "name": "helsingborg-stad/recaptcha-integration",
         "version": "dev-main",
         "version_normalized": "dev-main",
