@@ -1,10 +1,10 @@
 {
-  "css/mce.css": "css/mce.css",
-  "css/municipio.css": "css/municipio.css",
-  "css/styleguide.css": "css/styleguide.css",
-  "js/mce.js": "js/mce.js",
-  "js/mce-metadata.js": "js/mce-metadata.js",
-  "js/mce-pricons.js": "js/mce-pricons.js",
-  "js/municipio.js": "js/municipio.js",
-  "js/styleguide.js": "js/styleguide.js"
+  "css/mce.css": "css/mce.e3c2e2e2.css",
+  "css/municipio.css": "css/municipio.90c09ea7.css",
+  "css/styleguide.css": "css/styleguide.60f6baf4.css",
+  "js/mce.js": "js/mce.c5bcd9f78d1916433d3e.js",
+  "js/mce-metadata.js": "js/mce-metadata.2640dfdbc82c7db09ddc.js",
+  "js/mce-pricons.js": "js/mce-pricons.9496ee22d3794c3f68b6.js",
+  "js/municipio.js": "js/municipio.4a404e46550577bbdbb3.js",
+  "js/styleguide.js": "js/styleguide.b46fbc557cf5729a11e7.js"
 }
