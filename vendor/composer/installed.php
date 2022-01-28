@@ -1,12 +1,12 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => 'dev-3.0/develop',
-        'version' => 'dev-3.0/develop',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
         'type' => 'wordpress-theme',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'a2f41101ae914a78959543caf3ed222ab191a62e',
-        'name' => 'helsingborg-stad/municipio',
+        'reference' => '8d73ad50b8d1974a64e797f6732afa8831b1ea36',
+        'name' => 'helsingborg-stad/trenomvarldsanalys-wp',
         'dev' => true,
     ),
     'versions' => array(
@@ -20,14 +20,12 @@
             'dev_requirement' => false,
         ),
         'composer/installers' => array(
-            'pretty_version' => 'dev-main',
-            'version' => 'dev-main',
+            'pretty_version' => '1.x-dev',
+            'version' => '1.9999999.9999999.9999999-dev',
             'type' => 'composer-plugin',
             'install_path' => __DIR__ . '/./installers',
-            'aliases' => array(
-                0 => '1.x-dev',
-            ),
-            'reference' => 'ae03311f45dfe194412081526be2e003960df74b',
+            'aliases' => array(),
+            'reference' => 'd20a64ed3c94748397ff5973488761b22f6d3f19',
             'dev_requirement' => false,
         ),
         'doctrine/inflector' => array(
@@ -37,6 +35,17 @@
             'install_path' => __DIR__ . '/../doctrine/inflector',
             'aliases' => array(),
             'reference' => '4bd5c1cdfcd00e9e2d8c484f79150f67e5d355d9',
+            'dev_requirement' => false,
+        ),
+        'dompdf/dompdf' => array(
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../dompdf/dompdf',
+            'aliases' => array(
+                0 => '9999999-dev',
+            ),
+            'reference' => '271c651ced0e2bc6dabfbbbc79dbb324d82df1cf',
             'dev_requirement' => false,
         ),
         'helsingborg-stad/acf-export-manager' => array(
@@ -70,24 +79,13 @@
             'reference' => 'bab7d8e78d2f70181034c680ead1cf1bad827532',
             'dev_requirement' => false,
         ),
-        'helsingborg-stad/municipio' => array(
-            'pretty_version' => 'dev-3.0/develop',
-            'version' => 'dev-3.0/develop',
+        'helsingborg-stad/trenomvarldsanalys-wp' => array(
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
             'type' => 'wordpress-theme',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'a2f41101ae914a78959543caf3ed222ab191a62e',
-            'dev_requirement' => false,
-        ),
-        'helsingborg-stad/recaptcha-integration' => array(
-            'pretty_version' => 'dev-main',
-            'version' => 'dev-main',
-            'type' => 'library',
-            'install_path' => __DIR__ . '/../helsingborg-stad/recaptcha-integration',
-            'aliases' => array(
-                0 => '9999999-dev',
-            ),
-            'reference' => 'e64e073cd204af6688d170839c92f06c9c223c5f',
+            'reference' => '8d73ad50b8d1974a64e797f6732afa8831b1ea36',
             'dev_requirement' => false,
         ),
         'illuminate/container' => array(
@@ -152,7 +150,25 @@
             'aliases' => array(
                 0 => '2.x-dev',
             ),
-            'reference' => 'ab4e1a93d648db8928fd9172aeac795f5181bccd',
+            'reference' => '626ec8cbb724cd3c3400c3ed8f730545b744e3f4',
+            'dev_requirement' => false,
+        ),
+        'phenx/php-font-lib' => array(
+            'pretty_version' => '0.5.4',
+            'version' => '0.5.4.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../phenx/php-font-lib',
+            'aliases' => array(),
+            'reference' => 'dd448ad1ce34c63d09baccd05415e361300c35b4',
+            'dev_requirement' => false,
+        ),
+        'phenx/php-svg-lib' => array(
+            'pretty_version' => '0.4.0',
+            'version' => '0.4.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../phenx/php-svg-lib',
+            'aliases' => array(),
+            'reference' => '3ffbbb037f0871c3a819e90cff8b36dd7e656189',
             'dev_requirement' => false,
         ),
         'pragmarx/ia-arr' => array(
@@ -165,34 +181,30 @@
             'dev_requirement' => false,
         ),
         'psr/container' => array(
-            'pretty_version' => '1.1.x-dev',
-            'version' => '1.1.9999999.9999999-dev',
+            'pretty_version' => '1.x-dev',
+            'version' => '1.9999999.9999999.9999999-dev',
             'type' => 'library',
             'install_path' => __DIR__ . '/../psr/container',
             'aliases' => array(),
-            'reference' => '8622567409010282b7aeebe4bb841fe98b58dcaf',
+            'reference' => '513e0666f7216c7459170d56df27dfcefe1689ea',
             'dev_requirement' => false,
         ),
         'psr/log' => array(
-            'pretty_version' => 'dev-master',
-            'version' => 'dev-master',
+            'pretty_version' => '1.1.4',
+            'version' => '1.1.4.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../psr/log',
-            'aliases' => array(
-                0 => '1.1.x-dev',
-            ),
+            'aliases' => array(),
             'reference' => 'd49695b909c3b7628b6289db5479a1c204601f11',
             'dev_requirement' => false,
         ),
         'psr/simple-cache' => array(
-            'pretty_version' => 'dev-master',
-            'version' => 'dev-master',
+            'pretty_version' => '1.0.1',
+            'version' => '1.0.1.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../psr/simple-cache',
-            'aliases' => array(
-                0 => '1.0.x-dev',
-            ),
-            'reference' => '5a7b96b1dda5d957e01bc1bfe77dcca09c5a7474',
+            'aliases' => array(),
+            'reference' => '408d5eafb83c57f6365a3ca330ff23aa4a5fa39b',
             'dev_requirement' => false,
         ),
         'roundcube/plugin-installer' => array(
@@ -201,6 +213,37 @@
                 0 => '*',
             ),
         ),
+        'sabberworm/php-css-parser' => array(
+            'pretty_version' => '8.4.0',
+            'version' => '8.4.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../sabberworm/php-css-parser',
+            'aliases' => array(),
+            'reference' => 'e41d2140031d533348b2192a83f02d8dd8a71d30',
+            'dev_requirement' => false,
+        ),
+        'setasign/fpdf' => array(
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../setasign/fpdf',
+            'aliases' => array(
+                0 => '9999999-dev',
+            ),
+            'reference' => 'b0ddd9c5b98ced8230ef38534f6f3c17308a7974',
+            'dev_requirement' => false,
+        ),
+        'setasign/fpdi' => array(
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../setasign/fpdi',
+            'aliases' => array(
+                0 => '9999999-dev',
+            ),
+            'reference' => '273ab1544a6a53aa7beb6f14366586a9dd3369c5',
+            'dev_requirement' => false,
+        ),
         'shama/baton' => array(
             'dev_requirement' => false,
             'replaced' => array(
@@ -208,12 +251,12 @@
             ),
         ),
         'shortpixel/shortpixel-php' => array(
-            'pretty_version' => 'V1.7.3',
-            'version' => '1.7.3.0',
+            'pretty_version' => 'v1.8.7',
+            'version' => '1.8.7.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../shortpixel/shortpixel-php',
             'aliases' => array(),
-            'reference' => '2b654571c203399c3db967318db23e82233f632d',
+            'reference' => '3ce73d6d5c11031579bb036d7059b570b00e2255',
             'dev_requirement' => false,
         ),
         'symfony/debug' => array(
@@ -222,7 +265,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/debug',
             'aliases' => array(),
-            'reference' => 'a8d2d5c94438548bff9f998ca874e202bb29d07f',
+            'reference' => '5de6c6e7f52b364840e53851c126be4d71e60470',
             'dev_requirement' => false,
         ),
         'symfony/finder' => array(
@@ -244,14 +287,12 @@
             'dev_requirement' => false,
         ),
         'symfony/polyfill-php80' => array(
-            'pretty_version' => 'dev-main',
-            'version' => 'dev-main',
+            'pretty_version' => 'v1.24.0',
+            'version' => '1.24.0.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/polyfill-php80',
-            'aliases' => array(
-                0 => '1.23.x-dev',
-            ),
-            'reference' => 'eca0bf41ed421bed1b57c4958bab16aa86b757d0',
+            'aliases' => array(),
+            'reference' => '57b712b08eddb97c762a8caa32c84e037892d2e9',
             'dev_requirement' => false,
         ),
         'symfony/translation' => array(
@@ -284,7 +325,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/var-dumper',
             'aliases' => array(),
-            'reference' => '2b61222e16a040bf955b194cc0639db24d8b39e3',
+            'reference' => '970a01f208bf895c5f327ba40b72288da43adec4',
             'dev_requirement' => false,
         ),
         'tgmpa/tgm-plugin-activation' => array(

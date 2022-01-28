@@ -8,14 +8,14 @@ class ComposerStaticInit8f5caafe59a98f1f319ee2ea9f8d1ec2
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
-        '72579e7bd17821bb1321b87411366eae' => __DIR__ . '/..' . '/illuminate/support/helpers.php',
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
+        '72579e7bd17821bb1321b87411366eae' => __DIR__ . '/..' . '/illuminate/support/helpers.php',
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
         'bbd3f4c222c0dc01d51aaddd000c7145' => __DIR__ . '/..' . '/pragmarx/ia-arr/src/Support/helpers.php',
         '5de818542d3f05537910d3201983c6e4' => __DIR__ . '/..' . '/pragmarx/ia-arr/src/Support/alias.php',
+        'a5f882d89ab791a139cd2d37e50cdd80' => __DIR__ . '/..' . '/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php',
         '8ec4222c68e580a23520eef4abe4380f' => __DIR__ . '/..' . '/shortpixel/shortpixel-php/lib/ShortPixel.php',
         'c93afce03290e70ec0d051b69a50edb0' => __DIR__ . '/..' . '/shortpixel/shortpixel-php/lib/ShortPixel/Exception.php',
-        'a5f882d89ab791a139cd2d37e50cdd80' => __DIR__ . '/..' . '/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -34,6 +34,7 @@ class ComposerStaticInit8f5caafe59a98f1f319ee2ea9f8d1ec2
             'Symfony\\Component\\Debug\\' => 24,
             'Svg\\' => 4,
             'ShortPixel\\' => 11,
+            'Sabberworm\\CSS\\' => 15,
         ),
         'P' => 
         array (
@@ -122,6 +123,10 @@ class ComposerStaticInit8f5caafe59a98f1f319ee2ea9f8d1ec2
         array (
             0 => __DIR__ . '/..' . '/shortpixel/shortpixel-php/lib/ShortPixel',
         ),
+        'Sabberworm\\CSS\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/sabberworm/php-css-parser/src',
+        ),
         'Psr\\SimpleCache\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/simple-cache/src',
@@ -170,7 +175,6 @@ class ComposerStaticInit8f5caafe59a98f1f319ee2ea9f8d1ec2
         array (
             0 => __DIR__ . '/..' . '/helsingborg-stad/blade-engine-wrapper/src',
             1 => __DIR__ . '/..' . '/helsingborg-stad/global-blade-engine/src',
-            2 => __DIR__ . '/..' . '/helsingborg-stad/recaptcha-integration/src',
         ),
         'FontLib\\' => 
         array (
@@ -206,18 +210,9 @@ class ComposerStaticInit8f5caafe59a98f1f319ee2ea9f8d1ec2
         ),
     );
 
-    public static $prefixesPsr0 = array (
-        'S' => 
-        array (
-            'Sabberworm\\CSS' => 
-            array (
-                0 => __DIR__ . '/..' . '/sabberworm/php-css-parser/lib',
-            ),
-        ),
-    );
-
     public static $classMap = array (
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
+        'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Dompdf\\Cpdf' => __DIR__ . '/..' . '/dompdf/dompdf/lib/Cpdf.php',
         'FPDF' => __DIR__ . '/..' . '/setasign/fpdf/fpdf.php',
         'HTML5_Data' => __DIR__ . '/..' . '/dompdf/dompdf/lib/html5lib/Data.php',
@@ -235,7 +230,6 @@ class ComposerStaticInit8f5caafe59a98f1f319ee2ea9f8d1ec2
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit8f5caafe59a98f1f319ee2ea9f8d1ec2::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit8f5caafe59a98f1f319ee2ea9f8d1ec2::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit8f5caafe59a98f1f319ee2ea9f8d1ec2::$prefixesPsr0;
             $loader->classMap = ComposerStaticInit8f5caafe59a98f1f319ee2ea9f8d1ec2::$classMap;
 
         }, null, ClassLoader::class);
