@@ -46,8 +46,7 @@
         "pragmarx/ia-arr": "^7.3",
         "dompdf/dompdf": "dev-master",
         "setasign/fpdf": "dev-master",
-        "setasign/fpdi": "dev-master",
-        "helsingborg-stad/modularity-sections": "dev-master"
+        "setasign/fpdi": "dev-master"
     },
     "extra" : {
         "installer-paths" : {
