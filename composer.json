@@ -1,14 +1,10 @@
 {
-    "name": "helsingborg-stad/municipio",
-    "description": "A bootstrap theme for creating municipality sites.",
+    "name": "helsingborg-stad/trenomvarldsanalys-wp",
+    "description": "3.0 Municipio childtheme for Trend, Omvarld.",
     "license": "MIT",
     "type": "wordpress-theme",
     "minimum-stability": "dev",
     "authors": [
-        {
-            "name": "Kristoffer Svanmark",
-            "email": "kristoffer.svanmark@lexiconitkonsult.se"
-        },
         {
             "name": "Sebastian Thulin",
             "email": "sebastian.thulin@helsingborg.se"
